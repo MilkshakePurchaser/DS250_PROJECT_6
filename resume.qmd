@@ -38,11 +38,12 @@ Diploma | McLean High School, VA 2019 - 2023
 <ul>
   <li>Financial manager of a two man crew taking projects from deck construction, indoor painting, custom furniture, to minor landscaping tasks</li>
   <li>500+ hours doing animation and 3D modeling in Blender<li>
-  <li>8+ years of experience playing the Euphonium<li>
-  <li>All District brass finalist for VA in 2022<li>
 </ul>
 
-
+</ul>
+    <li>8+ years of experience playing the Euphonium<li>
+  <li>All District brass finalist for VA in 2022<li>
+</ul>
 
 
 

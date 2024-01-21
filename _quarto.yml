@@ -12,8 +12,8 @@ website:
     border: true
     left: "Josh 2023©"
     right: 
- #     - icon: linkedin
-  #      href: Your_LinkedIn_URL
+      - icon: linkedin
+        href: Your_LinkedIn_URL
 
   navbar:
     background: primary

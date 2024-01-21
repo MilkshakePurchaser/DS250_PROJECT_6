@@ -5,10 +5,10 @@ title: Josh LaPointe's CV
 # Josh LaPointe
 Student, Biology Enjoyer, and Cool Dude.
 
-<div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
-</div>
+<!-- <div id="webaddress"> -->
+<!-- <a href="isaac@applesdofall.org">isaac@applesdofall.org</a> -->
+<!-- | <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a> -->
+<!-- </div> -->
 
 
 ## Currently
@@ -37,8 +37,8 @@ __BYUI__
 
 ## Awards
 
-`2012`
-Musician, *All District Band Finalist*, Falls Church, VA
+`2022`
+*All District Band Finalist*, Falls Church, VA
 
 
 

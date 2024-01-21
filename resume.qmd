@@ -3,7 +3,7 @@ layout: cv
 title: Josh LaPointe's CV
 ---
 # Josh LaPointe
-Student, Biology Enjoyer, and Cool Dude.
+Student, Biology Enjoyer, and Cool Dude. Cell: (703-388-6485)
 
 <!-- <div id="webaddress"> -->
 <!-- <a href="isaac@applesdofall.org">isaac@applesdofall.org</a> -->
@@ -11,42 +11,35 @@ Student, Biology Enjoyer, and Cool Dude.
 <!-- </div> -->
 
 
-## Currently
-
-Pumping iron and studying biology
-
-### Specialized in
-
-Bioinformatics, 3D Modeling, Music
-
 
 ### Research interests
 
-Cellular processes, Medicine, Biological Computers 
+Medicine, Biological Processes 
 
 
 ## Education
 
-`2019-2023`
-__McLean Highschool, Virginia__
+Biology Major | BYUI 2023 - now
+<ul>
+  <li>Major in Bioinformatics</li>
+  <li>3.9 GPA</li>
+</ul>
 
-`2023 - now`
-__BYUI__
-
-
-
-## Awards
-
-`2022`
-*All District Band Finalist*, Falls Church, VA
-
+High School Diploma | McLean High School, VA 2019 - 2023
+<ul>
+  <li>4 Years of Band Class</li>
+  <li>4 Years of Cross Country and Track</li>
+</ul>
 
 
+### Experience
+Various Carpentry Projects
+<ul>
+  <li>I have been the financial manager of a two man crew taking projects from deck construction, indoor painting, furniture making, to minor landscaping tasks</li>
+  <li>500+ hours doing animation and 3D modeling in Blender</li>
+  <li>8+ years of experience playing the Euphonium and was an all district finalist for VA in 2022 </li>
+</ul>
 
-## Occupation
-
-`2004 - now`
-Unemployed, United States
 
 
 

@@ -91,9 +91,9 @@
   {
     "objectID": "Projects/project2.html",
     "href": "Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Flight Data",
     "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks",
+    "text": "Show the code\nimport pandas as pd \nimport plotly.express as px",
     "crumbs": [
       "DS250 Projects",
       "Project 2"
@@ -102,9 +102,9 @@
   {
     "objectID": "Projects/project2.html#elevator-pitch",
     "href": "Projects/project2.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks",
+    "title": "Client Report - Flight Data",
+    "section": "Elevator Pitch",
+    "text": "Elevator Pitch\nAfter looking at the data, I have found statistics which may be useful in different scenarios. At a corporate level, a company may not be as interested in looking at uncontrollable weather related delays, instead choosing to focus on avoidable security related delays. A consumer, however, who is planning a vaccation might benefit from looking at specific data about the airport they are flying into such as rates of weather related delays so that they can check the forecast ahead of time and determine whether to book a flight ____",
     "crumbs": [
       "DS250 Projects",
       "Project 2"
@@ -113,9 +113,9 @@
   {
     "objectID": "Projects/project2.html#questiontask-1",
     "href": "Projects/project2.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Flight Data",
     "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n::: {#cell-Q1 chart .cell execution_count=4}\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n:::\n::: {#cell-Q1 table .cell .tbl-cap-location-top tbl-cap=‘Not much of a table’ execution_count=5}\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0\n\n\n\n\n\n\n:::",
+    "text": "QUESTION|TASK 1\nFix all of the varied missing data types in the data to be consistent\n\n\nShow the code\nimport pandas as pd\nimport plotly.express as px\nimport numpy as np \n\n\nurl = 'https://raw.githubusercontent.com/byuidatascience/data4missing/master/data-raw/flights_missing/flights_missing.json'\ndf = pd.read_json(url)\n\ndf = df.replace([-999,0], \"NaN\")\n\ndf_2005 = df[df[\"year\"] == 2005]\n\n\ndf_2005 = pd.crosstab(index=df_2005[\"airport_code\"], columns=df_2005[\"month\"], values=df_2005[\"num_of_delays_late_aircraft\"], aggfunc=np.sum)\n\ndf_2005\n\n\n\n\n\n\n\n\nmonth\nApril\nAugust\nDecember\nFebuary\nJanuary\nJuly\nJune\nMarch\nMay\nNovember\nOctober\nSeptember\n\n\nairport_code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nATL\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n1195\nNaN\n1402\n977\n\n\nDEN\n350\n788\n1183\n432\n928\n1141\n1118\n586\n668\n590\n590\n461\n\n\nIAD\n517\n763\n550\n631\n1058\n1170\n1040\n724\n649\n307\n479\n357\n\n\nORD\n980\n1663\n2586\n1222\n2255\n2241\n2329\n1665\n1375\n1602\n1101\n1262\n\n\nSAN\n369\n571\n620\n491\n680\n675\n604\n489\n383\n327\n495\n419\n\n\nSFO\n339\n683\n766\n457\n733\n723\n737\n455\n438\n473\n516\n417\n\n\nSLC\n382\n684\n840\n463\n564\n733\n642\n614\n371\n469\n449\n432\n\n\n\n\n\n\n\nAll values of 0 and -999 have been replaced with “NaN”",
     "crumbs": [
       "DS250 Projects",
       "Project 2"
@@ -124,9 +124,9 @@
   {
     "objectID": "Projects/project2.html#questiontask-2",
     "href": "Projects/project2.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Flight Data",
     "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n::: {#cell-Q2 chart .cell execution_count=7}\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n:::\n::: {#cell-Q2 table .cell .tbl-cap-location-top tbl-cap=‘Not much of a table’ execution_count=8}\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0\n\n\n\n\n\n\n:::",
+    "text": "QUESTION|TASK 2\nWhich airport has the worst delays?\n\n\nShow the code\ndf = df[df[\"year\"] &lt;= 2015]\n\ndf_total_flights = df.groupby(\"airport_code\")[\"num_of_flights_total\"].sum()\n\ndf_total_delays = df.groupby(\"airport_code\")[\"num_of_delays_total\"].sum()\n\ndf_proportion_delayed = df_total_delays / df_total_flights\n\ndf_avg_delay_time_hours = (df.groupby(\"airport_code\")[\"minutes_delayed_total\"].sum() / df_total_delays) / 60\n\ndelay_table = pd.DataFrame({\n    \"Total Flights\": df_total_flights,\n    \"Total Delays\": df_total_delays,\n    \"Delay frequency\": df_proportion_delayed,\n    \"Avg Delay (hrs)\": df_avg_delay_time_hours\n})\ndelay_table\n\n\n\n\n\n\n\n\n\nTotal Flights\nTotal Delays\nDelay frequency\nAvg Delay (hrs)\n\n\nairport_code\n\n\n\n\n\n\n\n\nATL\n3648864\n749291\n0.205349\n0.991649\n\n\nDEN\n2513974\n468519\n0.186366\n0.895495\n\n\nIAD\n851571\n168467\n0.197831\n1.017358\n\n\nORD\n3597588\n830825\n0.230939\n1.130525\n\n\nSAN\n917862\n175132\n0.190804\n0.787620\n\n\nSFO\n1630945\n425604\n0.260955\n1.039718\n\n\nSLC\n1403384\n205160\n0.146189\n0.822396\n\n\n\n\n\n\n\nAll airports in the data have a delay frequency sitting around 20%. Since the quality of a delay is different from the frequency, the deciding factor is the delay length. ORD airport, which happens to have the second highest delay frequency at 23% has the longest average delay time at 1hr 8mins. Having the longest average delay time therefore makes ORD the airport with the worst delays",
     "crumbs": [
       "DS250 Projects",
       "Project 2"
@@ -135,9 +135,31 @@
   {
     "objectID": "Projects/project2.html#questiontask-3",
     "href": "Projects/project2.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - Flight Data",
     "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n::: {#cell-Q3 chart .cell execution_count=10}\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n                                                \nMy useless chart\n\n:::\n::: {#cell-Q3 table .cell .tbl-cap-location-top tbl-cap=‘Not much of a table’ execution_count=11}\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0\n\n\n\n\n\n\n:::",
+    "text": "QUESTION|TASK 3\nWhat is the best month to fly if you want to avoid delays of any length?\n\n\nShow the code\ndf_monthly_delays = df.groupby(\"month\")[\"num_of_delays_total\"].sum()\n\nmonthly_stats = pd.DataFrame({\n       \"Month\": [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\"],\n    \"Total Delays\": df_monthly_delays.values[:-1]\n})\n\nmonthly_stats\n\n\n\n\n\n\n\n\n\nMonth\nTotal Delays\n\n\n\n\n0\nJanuary\n210941\n\n\n1\nFebruary\n251620\n\n\n2\nMarch\n303133\n\n\n3\nApril\n239376\n\n\n4\nMay\n240858\n\n\n5\nJune\n306261\n\n\n6\nJuly\n304194\n\n\n7\nAugust\n231387\n\n\n8\nSeptember\n233494\n\n\n9\nOctober\n193054\n\n\n10\nNovember\n221091\n\n\n11\nDecember\n195043\n\n\n\n\n\n\n\nTo find the best month to fly in while avoiding delays, I looked at the total number of delays across all airports in each month. It should be noted that looking at individual airports is not in the intrest of finding a general answer. Because values fluctuate from year to year, there are multiple months which are optimal to travel in without delays. Those months are December and October, as they have the fewest average number of delays",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-4",
+    "href": "Projects/project2.html#questiontask-4",
+    "title": "Client Report - Flight Data",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nYour job is to create a new column that calculates the total number of flights delayed by weather\n\n\nShow the code\ndf = df.replace(\"NaN\", np.nan)\n# task 4\nlate_aircraft_mean = df[\"num_of_delays_late_aircraft\"].mean()\ndf[\"num_of_delays_late_aircraft\"].fillna(late_aircraft_mean, inplace=True)\n\n# task 4.A\ndf[\"weather_delays\"] = df[\"num_of_delays_weather\"]\n\n\n# task 4.B\ndf[\"weather_delays\"] += 0.3 * df[\"num_of_delays_late_aircraft\"]\n\n# task 4.C \ndf[\"weather_delays\"] += np.where(df[\"month\"].isin([\"April\", \"May\", \"June\", \"July\", \"August\"]),\n                                 0.4 * df[\"num_of_delays_nas\"],\n                                 0.65 * df[\"num_of_delays_nas\"])\n\n\nmonthly_weather_delays = df.groupby(\"month\")[\"weather_delays\"].sum().round(decimals=0)\nfull_monthly_stats = pd.DataFrame({\n    \"Month\": [\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"December\", \"NaN\"],\n    \"Total Delays\": df_monthly_delays.values,\n    \"Total Weather Delays\": monthly_weather_delays.values,\n})\n\n# excluding NaN row\nfull_monthly_stats.head(12)\n\n\n\n\n\n\n\n\n\nMonth\nTotal Delays\nTotal Weather Delays\n\n\n\n\n0\nJanuary\n210941\n60329.0\n\n\n1\nFebruary\n251620\n70893.0\n\n\n2\nMarch\n303133\n114993.0\n\n\n3\nApril\n239376\n93834.0\n\n\n4\nMay\n240858\n95448.0\n\n\n5\nJune\n306261\n85162.0\n\n\n6\nJuly\n304194\n87134.0\n\n\n7\nAugust\n231387\n89465.0\n\n\n8\nSeptember\n233494\n68369.0\n\n\n9\nOctober\n193054\n75607.0\n\n\n10\nNovember\n221091\n87128.0\n\n\n11\nDecember\n195043\n77335.0\n\n\n\n\n\n\n\nTable showing total weather delays with missing values in the late aircraft variable being replaced by the mean of that variable before any calculations are performed",
+    "crumbs": [
+      "DS250 Projects",
+      "Project 2"
+    ]
+  },
+  {
+    "objectID": "Projects/project2.html#questiontask-5",
+    "href": "Projects/project2.html#questiontask-5",
+    "title": "Client Report - Flight Data",
+    "section": "QUESTION|TASK 5",
+    "text": "QUESTION|TASK 5\nUsing the new weather variable calculated above, create a barplot showing the proportion of all flights that are delayed by weather at each airport. Discuss what you learn from this graph\n\n\nShow the code\nfig = px.bar(df, x=\"airport_code\", y=\"weather_delays\", title=\"Number of Flights Delayed by Weather\")\n\nfig.update_xaxes(title_text=\"Airport\")\nfig.update_yaxes(title_text=\"Weather Delays\")\nfig.show()\n\n\n                                                \n\n\nThis graph shows that the Dulles, San Diego, and Salt Lake airports have very low weather related delays compared to the other airports shown. Based on this, it can be inferred that travelers visiting those areas will be less likely to have their flight delayed. This means that those three airports are comparatively more reliable to select for vacations or holiday travel",
     "crumbs": [
       "DS250 Projects",
       "Project 2"
